@@ -1,0 +1,11 @@
+langchain 
+sqlalchemy
+python-dotenv
+langchain-community
+langchain-openai
+langchain-anthropic
+pydantic
+streamlit
+psycopg2
+langchain_experimental
+pydantic-settings
