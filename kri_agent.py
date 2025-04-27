@@ -4,9 +4,14 @@ from langchain.prompts import PromptTemplate
 from db import db
 from config import settings
 from langchain_community.llms import Ollama
+from langchain_openai import ChatOpenAI
+from config import settings  # Assuming y
 
-llm = Ollama(
-    model="phi"   # This tells LangChain to talk to your local Phi model via Ollama server
+llm = ChatOpenAI(
+    model="gpt-3.5-turbo",        # Or "gpt-4" if you have access
+    openai_api_key=settings.openai_api_key,
+    temperature=0,                # Optional: how random you want (0 = most stable)
+    max_tokens=1000               # Optional: max tokens in response
 )
 
 
